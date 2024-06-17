@@ -1,0 +1,46 @@
+{
+    "poppins": {
+        "100": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/poppins_100_068bd9b25394b5841c43e43604f4abf6",
+        "200": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/poppins_200_6ad855cb213b5e84660a5640d8f48bbd",
+        "300": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/poppins_300_999a4088f0da952988730996a4bec1d8",
+        "normal": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/poppins_normal_ee697d7869cb745ccf3ccccc013145ad",
+        "500": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/poppins_500_fce53b208cddccda1573b7620b579598",
+        "600": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/poppins_600_9623fbc18c38938c2057a9aae8390a42",
+        "bold": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/poppins_bold_8fe618268f56b4b8f1e70e87a9e99fc0",
+        "800": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/poppins_800_ef86a7722c08a791e114b6649bbd6ae4",
+        "900": "poppins_900_c60a07be40ef8f258a248a492dd87245"
+    },
+    "sora": {
+        "100": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/sora_100_ebb7b6f65a3827f93b11ac7f3e7d6610",
+        "200": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/sora_200_a6c85f7028c826873e33578605ea8bb4",
+        "300": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/sora_300_6d0d173df009f2cc76ea7d08f85461b9",
+        "normal": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/sora_normal_f1c29a1f990e70ed520f340f91f9f37d",
+        "500": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/sora_500_5f6051389110562a416c0917e7a20d27",
+        "600": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/sora_600_229c966b29528d914076304b692d1edf",
+        "bold": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/sora_bold_e78c891e3ca63f858980d7cbfdb91d18",
+        "800": "sora_800_2c2a53c7b785dd0771d821303bff8dc0"
+    },
+    "playfair display": {
+        "italic": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/playfair_display_italic_8a52f03aa2b3ef92e80efa537af4b91a",
+        "500_italic": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/playfair_display_500_italic_0a3e8d22aca7d1e1d1aff7990e3b883b",
+        "600_italic": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/playfair_display_600_italic_e21cb1052281474e2defb88a400aacfb",
+        "bold_italic": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/playfair_display_bold_italic_d1943b7f13d50bffaa38210901afc6bf",
+        "800_italic": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/playfair_display_800_italic_027a4bf84467c58920bc123ae31d403a",
+        "normal": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/playfair_display_normal_cadfef89c29522c6ef943454dc425843",
+        "500": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/playfair_display_500_aafe2b639f81dd55b988f2657fbf51a9",
+        "600": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/playfair_display_600_a0162dd7660c4a320eeeb479b3a8bcd5",
+        "bold": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/playfair_display_bold_937de43669ffc4bc5a11df63c9a6eb77",
+        "800": "playfair_display_800_2b25ab35e84a4331962bea6209ace893"
+    },
+    "lexend deca": {
+        "100": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/lexend_deca_100_375f363bac57287d61f00d1ff4e1a711",
+        "200": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/lexend_deca_200_c5ae8e41ca7565a2421a7d74bba026cc",
+        "300": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/lexend_deca_300_68027a21189111cd46e6d9fff153654e",
+        "normal": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/lexend_deca_normal_033461eb9f07201601a647521cbf4779",
+        "500": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/lexend_deca_500_ad916234c8c2f0201ed385abf6e22d48",
+        "600": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/lexend_deca_600_39b68307e2686152cccd17a51e003135",
+        "bold": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/lexend_deca_bold_b987a15a5c1aa4bfa418e6d754fd8b16",
+        "800": "\/Users\/yukiwicaksono\/Development\/smi_wedding\/storage\/fonts\/lexend_deca_800_b38b0a498e4f39d931d7d8790beb27aa",
+        "900": "lexend_deca_900_132644fbf2797591f4a793f239953567"
+    }
+}

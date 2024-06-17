@@ -1,0 +1,135 @@
+@use '../utils' as *;
+
+/*=============================
+    15. Features
+===============================*/
+.features {
+    &__area {
+        background: var(--tg-common-color-blue-2);
+        padding: 120px 0 90px;
+        @media #{$xs} {
+            padding: 100px 0 70px;
+        }
+        &-three {
+            background: var(--tg-common-color-gray);
+        }
+    }
+    &__item {
+        text-align: center;
+        margin-bottom: 30px;
+        &:hover {
+            & .features__icon {
+                @include transform(translateY(5px));
+            }
+        }
+        &-two {
+            @include border-radius(20px);
+            border: 1px solid #C9E4E9;
+            background: #F1FDFF;
+            box-shadow: 8px 8px 0px 0px #C9E4E9;
+            padding: 40px 40px 40px 50px;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 30px;
+            @include transition(.3s);
+            @media #{$lg} {
+                padding: 30px 25px 30px 25px;
+            }
+            &:hover {
+                box-shadow: none !important;
+                & .features__item-shape {
+                    color: #1BCBE3;
+                }
+            }
+        }
+        &-shape {
+            position: absolute;
+            right: 28px;
+            top: 21px;
+            z-index: -1;
+            @include transition(.3s);
+            color: rgba(39, 39, 47, 0.20);
+        }
+        &-wrap {
+            & .row {
+                & [class*="col-"] {
+                    &:nth-child(2) {
+                        & .features__item-two {
+                            border: 1px solid #C8C1ED;
+                            background: #EDEAFF;
+                            box-shadow: 8px 8px 0px 0px #D9D5F1;
+                            & .features__icon-two {
+                                background: #5751E1;
+                            }
+                            &:hover {
+                                & .features__item-shape {
+                                    color: #5751E1;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(3) {
+                        & .features__item-two {
+                            border: 1px solid #EBE0C4;
+                            background: #FFF7E2;
+                            box-shadow: 8px 8px 0px 0px #E5DECB;
+                            & .features__icon-two {
+                                background: #FFC224;
+                            }
+                            &:hover {
+                                & .features__item-shape {
+                                    color: #FFC224;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__icon {
+        margin-bottom: 22px;
+        min-height: 93px;
+        @include transition(.3s);
+        &-two {
+            width: 70px;
+            height: 70px;
+            flex: 0 0 auto;
+            color: var(--tg-common-color-white);
+            background: #1BCBE3;
+            @include border-radius(50%);
+            @include flexbox();
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__content {
+        & .title {
+            color: var(--tg-common-color-white);
+            margin-bottom: 8px;
+            font-size: 20px;
+            font-weight: var(--tg-fw-semi-bold);
+        }
+        & p {
+            margin-bottom: 0;
+            color: var(--tg-common-color-gray-4);
+        }
+        &-two {
+            & .content-top {
+                @include flexbox();
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 18px;
+            }
+            & .title {
+                margin-bottom: 0;
+                font-size: 22px;
+            }
+            & p {
+                margin-bottom: 0;
+                color: var(--tg-common-color-dark);
+                text-transform: capitalize;
+            }
+        }
+    }
+}

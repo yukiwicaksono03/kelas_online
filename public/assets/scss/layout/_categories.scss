@@ -1,0 +1,126 @@
+@use '../utils' as *;
+
+/*=============================
+    09. Categories
+===============================*/
+.section-py-120 {
+    padding: 120px 0;
+    @media #{$xs} {
+        padding: 100px 0;
+    }
+}
+.categories {
+    &__wrap {
+        background: var(--tg-common-color-gray);
+        @include border-radius(500px);
+        padding: 52px 145px 45px;
+        position: relative;
+        @media #{$lg} {
+            padding: 52px 100px 45px;
+        }
+        @media #{$md} {
+            padding: 45px 90px 45px;
+        }
+        @media #{$xs} {
+            padding: 30px 20px 30px;
+            @include border-radius(30px);
+        }
+    }
+    &__item {
+        text-align: center;
+        & .icon {
+            width: 150px;
+            height: 150px;
+            @include flexbox();
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--tg-border-1);
+            border-radius: 150px;
+            background: linear-gradient(180deg, var(--tg-common-color-white) 0%, #F1F1FA 100%);
+            font-size: 55px;
+            color: #7F7E97;
+            @include transition(.3s);
+            position: relative;
+            margin: 0 0 12px;
+            @media #{$xs} {
+                width: 130px;
+                height: 130px;
+                font-size: 45px;
+                margin: 0 auto 12px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 26px;
+                right: 26px;
+                background-image: url(../img/icons/cat_star.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 30px;
+                height: 26px;
+                pointer-events: none;
+            }
+        }
+        & .name {
+            display: block;
+            font-family: var(--tg-heading-font-family);
+            font-size: 18px;
+            font-weight: var(--tg-fw-medium);
+            line-height: 1.5;
+            color: var(--tg-heading-color);
+            margin: 0 0 7px;
+        }
+        & .courses {
+            display: block;
+            line-height: 1.3;
+            font-family: var(--tg-heading-font-family);
+            color: var(--tg-body-color);
+        }
+        &:hover {
+            & .icon {
+                background: var(--tg-theme-primary);
+                box-shadow: 6px 5px 0px 0px rgba(0, 0, 0, 0.25);
+                color: var(--tg-common-color-white);
+            }
+        }
+    }
+    &__nav {
+        @media #{$xs} {
+            display: none;
+        }
+        & button {
+            position: absolute;
+            left: 50px;
+            top: 50%;
+            @include transform(translateY(-50%));
+            width: 50px;
+            height: 50px;
+            background: var(--tg-theme-secondary);
+            padding: 0 0;
+            @include border-radius(50%);
+            border: 1px solid #333;
+            box-shadow: -3px 2px 0px 0px #382900;
+            @include transition(.3s);
+            @media #{$lg} {
+                left: 30px;
+            }
+            @media #{$lg} {
+                left: 20px;
+            }
+            &.categories-button-next {
+                left: auto;
+                right: 50px;
+                box-shadow: 2px 4px 0px 0px #382900;
+                @media #{$lg} {
+                    right: 30px;
+                }
+                @media #{$lg} {
+                    right: 20px;
+                }
+            }
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
+}

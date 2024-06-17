@@ -1,0 +1,230 @@
+@use '../utils' as *;
+
+/*=============================
+    24. Footer
+===============================*/
+.footer {
+    &__area {
+        background: var(--tg-common-color-black);
+        &-two {
+            margin-top: -160px;
+            background: var(--tg-common-color-black);
+            & .footer__top {
+                padding: 230px 0 60px;
+            }
+        }
+    }
+    &__top {
+        padding: 100px 0 60px;
+        @media #{$xs} {
+            padding: 80px 0 40px;
+        }
+        & .row {
+            & [class*="col-"] {
+                &:nth-child(2) {
+                    & .footer__widget {
+                        margin-left: 60px;
+                        @media #{$md} {
+                            margin-left: 0;
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    & .footer__widget {
+                        margin-left: 60px;
+                        @media #{$md} {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__widget {
+        margin-bottom: 35px;
+        &-title {
+            margin-bottom: 0;
+            color: var(--tg-common-color-white);
+            font-size: 22px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 30px;
+                height: 4px;
+                border-radius: 2px;
+                background: var(--tg-theme-primary);
+            }
+        }
+    }
+    &__content {
+        & p {
+            margin-bottom: 12px;
+            color: var(--tg-common-color-gray-5);
+            width: 100%;
+            @media #{$sm} {
+                width: 100%;
+            }
+        }
+        & .list-wrap {
+            & li {
+                color: var(--tg-common-color-gray-5);
+                font-weight: 500;
+                margin-bottom: 7px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__link {
+        & .list-wrap {
+            & li {
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                & a {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: var(--tg-common-color-gray-5);
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -1px;
+                        width: 100%;
+                        height: 1px;
+                        background: currentColor;
+                        transform-origin: right top;
+                        transform: scale(0, 1);
+                        transition: transform 0.4s cubic-bezier(0.74, 0.72, 0.27, 0.24);
+                    }
+                    &:hover {
+                        color: var(--tg-theme-secondary);
+                        &::before {
+                            -webkit-transform-origin: left top;
+                            -ms-transform-origin: left top;
+                            transform-origin: left top;
+                            -webkit-transform: scale(1, 1);
+                            -ms-transform: scale(1, 1);
+                            transform: scale(1, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__contact {
+        &-content {
+            & p {
+                margin-bottom: 10px;
+                color: var(--tg-common-color-gray-5);
+            }
+        }
+    }
+    &__social {
+        @include flexbox();
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 35px;
+        & li {
+            & a {
+                color: var(--tg-common-color-gray-5);
+                &:hover {
+                    color: var(--tg-theme-secondary);
+                }
+            }
+        }
+    }
+    &__bottom {
+        background: var(--tg-common-color-dark);
+        padding: 35px 0;
+        @media #{$md} {
+            padding: 25px 0;
+        }
+        &-menu {
+            & .list-wrap {
+                @include flexbox();
+                align-items: center;
+                justify-content: flex-end;
+                gap: 32px;
+                @media #{$xs} {
+                    justify-content: center;
+                }
+                & li {
+                    & a {
+                        color: #8C9AB4;
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -1px;
+                            width: 100%;
+                            height: 1px;
+                            background: currentColor;
+                            transform-origin: right top;
+                            transform: scale(0, 1);
+                            transition: transform 0.4s cubic-bezier(0.74, 0.72, 0.27, 0.24);
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            right: -15px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 2px;
+                            height: 12px;
+                            background: #8C9AB4;
+                        }
+                        &:hover {
+                            color: var(--tg-theme-secondary);
+                            &::before {
+                                -webkit-transform-origin: left top;
+                                -ms-transform-origin: left top;
+                                transform-origin: left top;
+                                -webkit-transform: scale(1, 1);
+                                -ms-transform: scale(1, 1);
+                                transform: scale(1, 1);
+                            }
+                        }
+                    }
+                    &:last-child {
+                        & a {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.app-download {
+    @include flexbox();
+    align-items: center;
+    gap: 8px;
+    & a {
+        & img {
+            @include border-radius(4px);
+        }
+    }
+}
+.copy-right-text {
+    & p {
+        margin-bottom: 0;
+        color: #8C9AB4;
+        @media #{$xs} {
+            margin-bottom: 5px;
+            text-align: center;
+        }
+    }
+}

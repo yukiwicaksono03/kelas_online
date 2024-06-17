@@ -1,0 +1,141 @@
+$flaticon_skill_grow-font: "flaticon_skill_grow";
+
+@font-face {
+    font-family: $flaticon_skill_grow-font;
+    src: url("./flaticon_skill_grow.ttf?b804fdf7efe64078cf35502d1d7c3cc7") format("truetype"),
+url("./flaticon_skill_grow.woff?b804fdf7efe64078cf35502d1d7c3cc7") format("woff"),
+url("./flaticon_skill_grow.woff2?b804fdf7efe64078cf35502d1d7c3cc7") format("woff2"),
+url("./flaticon_skill_grow.eot?b804fdf7efe64078cf35502d1d7c3cc7#iefix") format("embedded-opentype"),
+url("./flaticon_skill_grow.svg?b804fdf7efe64078cf35502d1d7c3cc7#flaticon_skill_grow") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_skill_grow !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_skill_grow-map: (
+    "search": "\f101",
+    "search-1": "\f102",
+    "back": "\f103",
+    "arrow-right": "\f104",
+    "angle-right": "\f105",
+    "right": "\f106",
+    "scribble": "\f107",
+    "placeholder": "\f108",
+    "map": "\f109",
+    "calendar": "\f10a",
+    "calendar-1": "\f10b",
+    "clock": "\f10c",
+    "book": "\f10d",
+    "shopping-cart": "\f10e",
+    "mortarboard": "\f10f",
+    "user": "\f110",
+    "user-1": "\f111",
+    "graphic-design": "\f112",
+    "email": "\f113",
+    "investment": "\f114",
+    "profit": "\f115",
+    "fashion": "\f116",
+    "web-design": "\f117",
+    "data-management": "\f118",
+    "interaction": "\f119",
+    "coding": "\f11a",
+    "rating-stars": "\f11b",
+    "webinar": "\f11c",
+    "certificate": "\f11d",
+);
+
+.flaticon-search:before {
+    content: map-get($flaticon_skill_grow-map, "search");
+}
+.flaticon-search-1:before {
+    content: map-get($flaticon_skill_grow-map, "search-1");
+}
+.flaticon-back:before {
+    content: map-get($flaticon_skill_grow-map, "back");
+}
+.flaticon-arrow-right:before {
+    content: map-get($flaticon_skill_grow-map, "arrow-right");
+}
+.flaticon-angle-right:before {
+    content: map-get($flaticon_skill_grow-map, "angle-right");
+}
+.flaticon-right:before {
+    content: map-get($flaticon_skill_grow-map, "right");
+}
+.flaticon-scribble:before {
+    content: map-get($flaticon_skill_grow-map, "scribble");
+}
+.flaticon-placeholder:before {
+    content: map-get($flaticon_skill_grow-map, "placeholder");
+}
+.flaticon-map:before {
+    content: map-get($flaticon_skill_grow-map, "map");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon_skill_grow-map, "calendar");
+}
+.flaticon-calendar-1:before {
+    content: map-get($flaticon_skill_grow-map, "calendar-1");
+}
+.flaticon-clock:before {
+    content: map-get($flaticon_skill_grow-map, "clock");
+}
+.flaticon-book:before {
+    content: map-get($flaticon_skill_grow-map, "book");
+}
+.flaticon-shopping-cart:before {
+    content: map-get($flaticon_skill_grow-map, "shopping-cart");
+}
+.flaticon-mortarboard:before {
+    content: map-get($flaticon_skill_grow-map, "mortarboard");
+}
+.flaticon-user:before {
+    content: map-get($flaticon_skill_grow-map, "user");
+}
+.flaticon-user-1:before {
+    content: map-get($flaticon_skill_grow-map, "user-1");
+}
+.flaticon-graphic-design:before {
+    content: map-get($flaticon_skill_grow-map, "graphic-design");
+}
+.flaticon-email:before {
+    content: map-get($flaticon_skill_grow-map, "email");
+}
+.flaticon-investment:before {
+    content: map-get($flaticon_skill_grow-map, "investment");
+}
+.flaticon-profit:before {
+    content: map-get($flaticon_skill_grow-map, "profit");
+}
+.flaticon-fashion:before {
+    content: map-get($flaticon_skill_grow-map, "fashion");
+}
+.flaticon-web-design:before {
+    content: map-get($flaticon_skill_grow-map, "web-design");
+}
+.flaticon-data-management:before {
+    content: map-get($flaticon_skill_grow-map, "data-management");
+}
+.flaticon-interaction:before {
+    content: map-get($flaticon_skill_grow-map, "interaction");
+}
+.flaticon-coding:before {
+    content: map-get($flaticon_skill_grow-map, "coding");
+}
+.flaticon-rating-stars:before {
+    content: map-get($flaticon_skill_grow-map, "rating-stars");
+}
+.flaticon-webinar:before {
+    content: map-get($flaticon_skill_grow-map, "webinar");
+}
+.flaticon-certificate:before {
+    content: map-get($flaticon_skill_grow-map, "certificate");
+}

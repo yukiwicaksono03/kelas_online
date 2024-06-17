@@ -1,0 +1,123 @@
+@use '../utils' as *;
+
+/*=============================
+    05. Slider
+===============================*/
+.slider {
+    &__active {
+        & [data-animation-in] {
+            opacity: 0;
+        }
+    }
+    &__item {
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+        padding: 135px 0 140px;
+        min-height: 600px;
+        position: relative;
+        z-index: 1;
+        @media #{$xl} {
+            padding: 110px 0 120px;
+            min-height: 560px;
+        }
+        & .top-shape,
+        & .bottom-shape {
+            position: absolute;
+            pointer-events: none;
+            z-index: -1;
+        }
+        & .top-shape {
+            left: 4%;
+            top: 11%;
+            @media #{$xl} {
+                max-width: 80px;
+            }
+        }
+        & .bottom-shape {
+            left: 0;
+            bottom: 0;
+            @media #{$xl} {
+                max-width: 350px;
+            }
+        }
+    }
+    &__content {
+        overflow: hidden;
+        & .sub-title {
+            display: inline-block;
+            line-height: 1.3;
+            background: var(--tg-common-color-gray);
+            @include border-radius(4px);
+            padding: 5px 15px;
+            font-weight: var(--tg-fw-medium);
+            color: var(--tg-theme-primary);
+            margin: 0 0 13px;
+            @media #{$xl} {
+                padding: 0 0;
+                background: transparent;
+                font-weight: var(--tg-fw-semi-bold);
+            }
+        }
+        & .title {
+            font-size: 48px;
+            margin: 0 0 30px;
+            letter-spacing: -1px;
+            text-transform: capitalize;
+            @media #{$xs} {
+                font-size: 38px;
+                margin: 0 0 20px;
+            }
+            @media #{$sm} {
+                font-size: 40px;
+                margin: 0 0 30px;
+            }
+            & span:not(.svg-icon) {
+                color: var(--tg-theme-primary);
+                position: relative;
+                display: inline-block;
+                z-index: 1;
+            }
+            & .svg-icon {
+                position: absolute;
+                left: 50%;
+                @include transform(translateX(-50%));
+                text-align: center;
+                margin: 0 auto;
+                bottom: -14px;
+                height: 25px;
+                width: 145px;
+                pointer-events: none;
+                z-index: -1;
+                @media #{$xs} {
+                    bottom: -15px;
+                }
+                & svg {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                & path {
+                    stroke: var(--tg-common-color-yellow);
+                }
+            }
+        }
+        & .list-wrap {
+            margin: 0 0 30px;
+            & li {
+                @include flexbox();
+                font-family: var(--tg-heading-font-family);
+                color: #39557E;
+                gap: 7px;
+                margin: 0 0 3px;
+                &:last-child {
+                    margin: 0 0;
+                }
+                & i {
+                    color: var(--tg-common-color-yellow);
+                    margin: 6px 0 0;
+                }
+            }
+        }
+    }
+}
