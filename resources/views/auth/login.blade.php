@@ -1,24 +1,57 @@
-@extends('layouts.app')
+@extends('../layout')
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Login') }}</div>
 
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('login') }}">
+    <main class="main-area fix">
+
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb__area breadcrumb__bg" data-background="assets/img/bg/breadcrumb_bg.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb__content">
+                            <h3 class="title">Student Login</h3>
+                            <nav class="breadcrumb">
+                                <span property="itemListElement" typeof="ListItem">
+                                    <a href="index.html">Home</a>
+                                </span>
+                                <span class="breadcrumb-separator"><i class="fas fa-angle-right"></i></span>
+                                <span property="itemListElement" typeof="ListItem">Login</span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="breadcrumb__shape-wrap">
+                <img src="assets/img/others/breadcrumb_shape01.svg" alt="img" class="alltuchtopdown">
+                <img src="assets/img/others/breadcrumb_shape02.svg" alt="img" data-aos="fade-right" data-aos-delay="300">
+                <img src="assets/img/others/breadcrumb_shape03.svg" alt="img" data-aos="fade-up" data-aos-delay="400">
+                <img src="assets/img/others/breadcrumb_shape04.svg" alt="img" data-aos="fade-down-left" data-aos-delay="400">
+                <img src="assets/img/others/breadcrumb_shape05.svg" alt="img" data-aos="fade-left" data-aos-delay="400">
+            </div>
+        </section>
+        <!-- breadcrumb-area-end -->
+
+        <!-- singUp-area -->
+        <section class="singUp-area section-py-120">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-8">
+                        <div class="singUp-wrap">
+                            <h2 class="title">Welcome back!</h2>
+                            <p>Hey there! Ready to log in? Just enter your username and password below and you'll be back in action in no time. Let's go!</p>
+
+                            <form method="POST" class="account__form" action="{{ route('login') }}">
                             @csrf
-
-                            <div class="form-group row">
-                                <label for="email"
-                                       class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                                <div class="col-md-6">
+                               <!--  <div class="form-grp">
+                                    <label for="email">Email</label>
+                                    <input id="email" type="text" placeholder="email">
+                                </div> -->
+                                <div class="form-grp">
+                                    <label for="email">Email</label>
                                     <input id="email" type="email"
                                            class="form-control @error('email') is-invalid @enderror" name="email"
-                                           value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                           value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="email">
 
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -26,16 +59,16 @@
                                     </span>
                                     @enderror
                                 </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="password"
-                                       class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                                <div class="col-md-6">
+                                <!-- <div class="form-grp">
+                                    <label for="password">Password</label>
+                                    <input id="password" type="password" placeholder="password">
+                                </div> -->
+                            <div class="form-grp">
+                                <label for="password">Password</label>
+                                <div class="form-grp">
                                     <input id="password" type="password"
                                            class="form-control @error('password') is-invalid @enderror" name="password"
-                                           required autocomplete="current-password">
+                                           required autocomplete="current-password" placeholder="password">
 
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -44,37 +77,28 @@
                                     @enderror
                                 </div>
                             </div>
-
-                            <div class="form-group row">
-                                <div class="col-md-6 offset-md-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember"
-                                               id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                        <label class="form-check-label" for="remember">
-                                            {{ __('Remember Me') }}
-                                        </label>
+                                <div class="account__check">
+                                    <div class="account__check-remember">
+                                        <input type="checkbox" class="form-check-input" value="" id="terms-check">
+                                        <label for="terms-check" class="form-check-label">Remember me</label>
+                                    </div>
+                                    <div class="account__check-forgot">
+                                        <a href="forgot-pass.html">Forgot Password?</a>
                                     </div>
                                 </div>
-                            </div>
+                                <button type="submit" class="btn btn-two arrow-btn">Sign In<img src="assets/img/icons/right_arrow.svg" alt="img" class="injectable"></button>
+                            </form>
 
-                            <div class="form-group row mb-0">
-                                <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Login') }}
-                                    </button>
 
-                                    @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Forgot Your Password?') }}
-                                        </a>
-                                    @endif
-                                </div>
+                            <div class="account__switch">
+                                <p>Don't have an account?<a href="registration.html">Sign Up</a></p>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-@endsection
+        </section>
+        <!-- singUp-area-end -->
+
+    </main>
+    @endsection

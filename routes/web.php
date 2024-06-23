@@ -29,6 +29,7 @@ use App\Http\Controllers\Auth\LoginController;
 // Route::get('/', [ProductController::class, 'index']);  
 
 Route::get('', [ProductController::class, 'home'])->name('home');
+Route::get('/home', [ProductController::class, 'home'])->name('home');
 Route::get('course_payment', [ProductController::class, 'course_payment'])->name('course_payment');
 Route::get('courses/{id}', [ProductController::class, 'courses'])->name('courses');
 Route::get('course_detail/{id}', [ProductController::class, 'course_detail'])->name('course_detail');
@@ -90,7 +91,6 @@ Route::delete('remove-from-cart', [ProductController::class, 'remove'])->name('r
 //     return view('welcome');
 // });
 
-Auth::routes();
 
 
 // Route::get('/admin', function () {
@@ -100,57 +100,61 @@ Auth::routes();
 
 // });
 
-// Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin', 'App\Http\Controllers\PegawaiController@index');
-// Route::get('/admin/logout', 'Auth\LoginController@userLogout')->name('user.logout');
-
-Route::post('/admin/logout', [LoginController::class, 'logout'])->middleware('auth');
-
-
     // Route::get('/pegawai/adminlte', 'App\Http\Controllers\PegawaiController@adminlte');
 
 
     //item
     Route::get('/admin', 'App\Http\Controllers\PegawaiController@index');
-    Route::get('/admin/tambah', 'App\Http\Controllers\PegawaiController@tambah');
-    Route::post('/admin/store', 'App\Http\Controllers\PegawaiController@store');
-    Route::put('/admin/update/{id}', 'App\Http\Controllers\PegawaiController@update');
-    Route::get('/admin/list_item', 'App\Http\Controllers\PegawaiController@list_item');
-    Route::get('/admin/edit/{id}', 'App\Http\Controllers\PegawaiController@edit');
-    Route::get('/admin/hapus/{id}', 'App\Http\Controllers\PegawaiController@delete');
+    Route::get('/tambah', 'App\Http\Controllers\PegawaiController@tambah');
+    Route::post('/store', 'App\Http\Controllers\PegawaiController@store');
+    Route::put('/update/{id}', 'App\Http\Controllers\PegawaiController@update');
+    Route::get('/list_item', 'App\Http\Controllers\PegawaiController@list_item');
+    Route::get('/edit/{id}', 'App\Http\Controllers\PegawaiController@edit');
+    Route::get('/hapus/{id}', 'App\Http\Controllers\PegawaiController@delete');
 
 
     //kategori
     // Route::get('/admin', 'App\Http\Controllers\KategoriController@index');
-    Route::get('/admin/kat/tambah', 'App\Http\Controllers\KategoriController@tambah');
-    Route::post('/admin/kat/store', 'App\Http\Controllers\KategoriController@store');
-    Route::put('/admin/kat/update/{id}', 'App\Http\Controllers\KategoriController@update');
-    Route::get('/admin/kat/list_kategori', 'App\Http\Controllers\KategoriController@list_kategori');
-    Route::get('/admin/kat/edit/{id}', 'App\Http\Controllers\KategoriController@edit');
-    Route::get('/admin/kat/hapus/{id}', 'App\Http\Controllers\KategoriController@delete');
+    Route::get('/kat/tambah', 'App\Http\Controllers\KategoriController@tambah');
+    Route::post('/kat/store', 'App\Http\Controllers\KategoriController@store');
+    Route::put('/kat/update/{id}', 'App\Http\Controllers\KategoriController@update');
+    Route::get('/kat/list_kategori', 'App\Http\Controllers\KategoriController@list_kategori');
+    Route::get('/kat/edit/{id}', 'App\Http\Controllers\KategoriController@edit');
+    Route::get('/kat/hapus/{id}', 'App\Http\Controllers\KategoriController@delete');
 
 
     // proposal
-    Route::post('/admin/proposal/store', 'App\Http\Controllers\ProposalController@store');
-    Route::get('/admin/proposal/pdf/{id}', 'App\Http\Controllers\ProposalController@pdf');
+    Route::post('/proposal/store', 'App\Http\Controllers\ProposalController@store');
+    Route::get('/proposal/pdf/{id}', 'App\Http\Controllers\ProposalController@pdf');
 
-    Route::post('/admin/proposal/edit/', 'App\Http\Controllers\ProposalController@edit');
-    Route::post('/admin/proposal/hapus/', 'App\Http\Controllers\ProposalController@hapus');
+    Route::post('/proposal/edit/', 'App\Http\Controllers\ProposalController@edit');
+    Route::post('/proposal/hapus/', 'App\Http\Controllers\ProposalController@hapus');
 
-    Route::put('/admin/proposal/update/{id}', 'App\Http\Controllers\ProposalController@update');
+    Route::put('/proposal/update/{id}', 'App\Http\Controllers\ProposalController@update');
     
 
-    Route::get('/admin/proposal/pdf/{id}', 'App\Http\Controllers\ProposalController@pdf');
-    Route::get('/admin/proposal/pdfnew', 'App\Http\Controllers\ProposalController@pdfnew');
+    Route::get('/proposal/pdf/{id}', 'App\Http\Controllers\ProposalController@pdf');
+    Route::get('/proposal/pdfnew', 'App\Http\Controllers\ProposalController@pdfnew');
     
-    Route::get('/admin/proposal/test_pdf', 'App\Http\Controllers\ProposalController@test_pdf');
-    Route::get('/admin/proposal/file', 'App\Http\Controllers\ProposalController@file');
+    Route::get('/proposal/test_pdf', 'App\Http\Controllers\ProposalController@test_pdf');
+    Route::get('/proposal/file', 'App\Http\Controllers\ProposalController@file');
 
-    Route::get('admin/pdfile/{id}', 'App\Http\Controllers\ProposalController@pdfile')->name('pdfile');
+    Route::get('pdfile/{id}', 'App\Http\Controllers\ProposalController@pdfile')->name('pdfile');
 
 
-    Route::get('/admin/list_proposal', 'App\Http\Controllers\ProposalController@list_proposal');
+    Route::get('/list_proposal', 'App\Http\Controllers\ProposalController@list_proposal');
     
+
+
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/login', 'App\Http\Controllers\PegawaiController@index');
+// Route::get('/logout', 'Auth\LoginController@userLogout')->name('user.logout');
+
+Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
+
+
+Auth::routes();
+
 Route::prefix('admin')->group(function () {
 
 

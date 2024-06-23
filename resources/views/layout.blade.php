@@ -143,9 +143,32 @@
                                                 <span class="mini-cart-count">0</span>
                                             </a>
                                         </li>
+        
+                                        @php
+                                        if(Auth::user()){
+                                            if(Auth::user()->name != ''){
+                                        @endphp
+                                        <li class="">Welcome {{Auth::user()->name}}</li>
                                         <li class="header-btn login-btn">
-                                            <a href="login.html">Log in</a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                                         </li>
+                                        @php
+                                            }else{
+
+                                            }
+                                        }else{
+                                        @endphp
+
+                                        <li class="header-btn login-btn">
+                                            <a href="login">Log in</a>
+                                        </li>
+                                        @php
+                                        }
+                                        @endphp
+
                                     </ul>
                                 </div>
                                 <div class="mobile-nav-toggler"><i class="tg-flaticon-menu-1"></i></div>
